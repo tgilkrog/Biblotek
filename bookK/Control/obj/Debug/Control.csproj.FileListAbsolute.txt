@@ -1,0 +1,9 @@
+C:\Users\tgilk\source\repos\bookK\Control\bin\Debug\Control.dll
+C:\Users\tgilk\source\repos\bookK\Control\bin\Debug\Control.pdb
+C:\Users\tgilk\source\repos\bookK\Control\bin\Debug\Model.dll
+C:\Users\tgilk\source\repos\bookK\Control\bin\Debug\Model.pdb
+C:\Users\tgilk\source\repos\bookK\Control\obj\Debug\Control.csprojAssemblyReference.cache
+C:\Users\tgilk\source\repos\bookK\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\source\repos\bookK\Control\obj\Debug\Control.csproj.CopyComplete
+C:\Users\tgilk\source\repos\bookK\Control\obj\Debug\Control.dll
+C:\Users\tgilk\source\repos\bookK\Control\obj\Debug\Control.pdb
