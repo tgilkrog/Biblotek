@@ -26,32 +26,41 @@ namespace bookK
         public MainWindow()
         {
             InitializeComponent();
-            FillViewList();
         }
 
-        public void FillViewList()
+        private void TopGrid_MouseDown(object sender, RoutedEventArgs e)
         {
-         
+            DragMove();
         }
 
-        private void GoToUser(object sender, RoutedEventArgs e)
+        private void Users_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new User();
         }
 
-        private void GoToBooks(object sender, RoutedEventArgs e)
+        private void Books_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new Book();
         }
 
-        private void GoToBooking(object sender, RoutedEventArgs e)
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ButtonMin_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Booking_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new Booking();
         }
 
-        private void CloseApp(object sender, RoutedEventArgs e)
+        private void NewBooking_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Main.Content = new CreateBooking();
         }
     }
 }

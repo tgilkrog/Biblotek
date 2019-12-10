@@ -30,14 +30,6 @@ namespace bookK
         {
             BookingList.ItemsSource = Bctr.GetList(false);
             ReturnedList.ItemsSource = Bctr.GetList(true);
-            UserList.ItemsSource = Bctr.GetAllUsers();
-            BookList.ItemsSource = Bctr.GetAvailableBooks();
-        }
-
-        private void CreateBooking(object sender, RoutedEventArgs e)
-        {
-            Bctr.CreateBooking((Model.Classes.User)UserList.SelectedItem, (Model.Classes.Book)BookList.SelectedItem);
-            FillViewList();
         }
 
         private void UpdateBooking(object sender, RoutedEventArgs e)

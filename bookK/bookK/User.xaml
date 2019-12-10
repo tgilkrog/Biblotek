@@ -5,21 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:bookK"
       mc:Ignorable="d" 
-      d:DesignHeight="560" d:DesignWidth="900"
+      d:DesignHeight="570" d:DesignWidth="824"
       Title="User">
 
-    <Grid>
-        <ListView x:Name="UserList" HorizontalAlignment="Left" Height="457" Margin="90,67,0,0" VerticalAlignment="Top" Width="290">
+    <Grid Background="White">
+        <ListView x:Name="UserList" HorizontalAlignment="Left" Height="457" Margin="90,67,0,0" VerticalAlignment="Top" Width="300">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Username" DisplayMemberBinding="{Binding UserName}"/>
+                    <GridViewColumn Header="Lib Nr." DisplayMemberBinding="{Binding UserID}"/>
+                    <GridViewColumn Header="BrugerNavn" DisplayMemberBinding="{Binding UserName}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Content="Alle Brugerer" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Opret Ny Bruger" HorizontalAlignment="Left" Margin="661,67,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label Content="Navn" HorizontalAlignment="Left" Margin="661,101,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="661,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Opret Bruger" HorizontalAlignment="Left" Margin="706,179,0,0" VerticalAlignment="Top" Width="75" Click="CreateUser"/>
+        <Label Content="Opret Ny Bruger" HorizontalAlignment="Left" Margin="535,44,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Navn" HorizontalAlignment="Left" Margin="535,81,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="535,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Opret Bruger" HorizontalAlignment="Left" Margin="535,155,0,0" VerticalAlignment="Top" Width="139" Click="CreateUser"/>
     </Grid>
 </Page>

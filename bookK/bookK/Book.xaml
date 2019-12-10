@@ -8,9 +8,9 @@
       d:DesignHeight="560" d:DesignWidth="900"
       Title="Book">
 
-    <Grid>
+    <Grid Background="White">
         <Label Content="Alle Bøger" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <ListView x:Name="BookList" HorizontalAlignment="Left" Height="483" Margin="10,67,0,0" VerticalAlignment="Top" Width="302">
+        <ListView x:Name="BookList" HorizontalAlignment="Left" Height="483" Margin="101,67,0,0" VerticalAlignment="Top" Width="302">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
@@ -26,7 +26,7 @@
         <TextBox Name="txtAuthor" HorizontalAlignment="Left" Height="23" Margin="569,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="ISBN Nr." HorizontalAlignment="Left" Margin="569,247,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtIsbn" HorizontalAlignment="Left" Height="23" Margin="569,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Opret Bog" HorizontalAlignment="Left" Margin="614,323,0,0" VerticalAlignment="Top" Width="75" Click="CreateBook"/>
+        <Button Content="Opret Bog" HorizontalAlignment="Left" Margin="627,321,0,0" VerticalAlignment="Top" Width="120" Click="CreateBook"/>
 
     </Grid>
 </Page>

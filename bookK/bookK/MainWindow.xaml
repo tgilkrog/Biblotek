@@ -4,13 +4,74 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bookK"
-        mc:Ignorable="d"
-        Title="bookK" Height="600" Width="1000" ResizeMode="NoResize" WindowStyle="None">
-    <Grid Background="#303a52">
-        <Frame x:Name="Main" Content="" Background="#f4f4f4" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="560" Margin="100,40,0,0" VerticalAlignment="Top" Width="900"/>
-        <Button Content="Brugere" HorizontalAlignment="Left" Margin="0,56,0,0" VerticalAlignment="Top" Width="95" Height="35" Click="GoToUser" Background="#303a52" Foreground="white" BorderThickness="0" Cursor="Hand" FontSize="18"/>
-        <Button Content="Bøger" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="95" Height="35" Click="GoToBooks" Background="#303a52" Foreground="white" BorderThickness="0" Cursor="Hand" FontSize="18"/>
-        <Button Content="Udlejning" HorizontalAlignment="Left" Margin="0,180,0,0" VerticalAlignment="Top" Width="95" Click="GoToBooking" Background="#303a52" Foreground="white" BorderThickness="0" Cursor="Hand" Height="35" FontSize="18"/>
-        <Button Content="X" HorizontalAlignment="Left" Margin="915,0,0,0" VerticalAlignment="Top" Width="85" Background="#303a52" Foreground="white" BorderThickness="0" FontSize="24" Click="CloseApp" Cursor="Hand" Height="40"/>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Title="bookK" Height="600" Width="1024" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Frame x:Name="Main" Content="" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Height="570" Width="824"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightGray" Offset="1"/>
+                    <GradientStop Color="#FFE6E6E6"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+
+            <StackPanel Grid.Row="1">
+                <Button Margin="10" Background="#39375b" BorderBrush="#39375b" Click="Booking_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Book" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Udlejning" FontFamily="Champagne &amp; Limousines" Foreground="White"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#39375b" BorderBrush="#39375b" Click="NewBooking_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Book" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Opret Udlejning" FontFamily="Champagne &amp; Limousines" Foreground="White"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#39375b" BorderBrush="#39375b" Click="Books_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="BookOpenVariant" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Bøger" FontFamily="Champagne &amp; Limousines" Foreground="White"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#39375b" BorderBrush="#39375b" Click="Users_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="White"/>
+                        <TextBlock HorizontalAlignment="Center" Text="Bruger" FontFamily="Champagne &amp; Limousines" Foreground="White"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="TopGrid" Grid.ColumnSpan="2" Background="#39375b" MouseDown="TopGrid_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="20,0" Click="ButtonMin_Click">
+                    <materialDesign:PackIcon Kind="Minus" />
+                </Button>
+                <Button x:Name="ButtonClose"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click">
+                    <materialDesign:PackIcon Kind="Power" />
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

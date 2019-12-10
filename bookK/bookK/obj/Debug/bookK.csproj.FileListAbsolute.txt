@@ -24,3 +24,9 @@ C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\Book.g.cs
 C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\Book.baml
 C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\Booking.g.cs
 C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\Booking.baml
+C:\Users\tgilk\source\repos\bookK\bookK\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\tgilk\source\repos\bookK\bookK\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\tgilk\source\repos\bookK\bookK\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\App.baml
+C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\CreateBooking.g.cs
+C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\CreateBooking.baml
