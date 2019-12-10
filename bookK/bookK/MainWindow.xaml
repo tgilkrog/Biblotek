@@ -35,6 +35,10 @@
                 <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
             </Grid.Effect>
 
+            <Grid Background="#4c4b6b">
+                <TextBlock Text="bookK" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="MV Boli" Foreground="White" FontSize="50"/>
+            </Grid>
+
             <StackPanel Grid.Row="1">
                 <Button Margin="10" Background="#39375b" BorderBrush="#39375b" Click="Booking_Click">
                     <Grid Width="150">
@@ -44,7 +48,7 @@
                 </Button>
                 <Button Margin="10" Background="#39375b" BorderBrush="#39375b" Click="NewBooking_Click">
                     <Grid Width="150">
-                        <materialDesign:PackIcon Kind="Book" VerticalAlignment="Center" Foreground="White"/>
+                        <materialDesign:PackIcon Kind="BookPlus" VerticalAlignment="Center" Foreground="White"/>
                         <TextBlock HorizontalAlignment="Center" Text="Opret Udlejning" FontFamily="Champagne &amp; Limousines" Foreground="White"/>
                     </Grid>
                 </Button>
