@@ -52,6 +52,11 @@ namespace Control
             return Bctr.GetAllBooks();
         }
 
+        public List<Booking> GetAllBookingsByUserID(int id)
+        {
+            return Bda.GetBookingsByUserID(id);
+        }
+
         //Her henter den de bøger som ikke er lejet ud
         public List<Book> GetAvailableBooks()
         {

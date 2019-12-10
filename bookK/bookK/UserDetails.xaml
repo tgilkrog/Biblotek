@@ -1,0 +1,26 @@
+﻿<Page x:Class="bookK.UserDetails"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:bookK"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserDetails">
+
+    <Grid Background="White">
+        <Label x:Name="lblLib" Content="bib Nr." HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="lblName"  Content="Name" HorizontalAlignment="Left" Margin="50,106,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" />
+        <Label Content="Dine Udlejninger" HorizontalAlignment="Left" Margin="354,21,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" />
+        <ListView x:Name="BookingList" HorizontalAlignment="Left" Height="373" Margin="354,53,0,0" VerticalAlignment="Top" Width="350">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Brugernavn" DisplayMemberBinding="{Binding User.UserName}"/>
+                    <GridViewColumn Header="Bog" DisplayMemberBinding="{Binding Book.Title}"/>
+                    <GridViewColumn Header="Retuneret" DisplayMemberBinding="{Binding Returned}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>

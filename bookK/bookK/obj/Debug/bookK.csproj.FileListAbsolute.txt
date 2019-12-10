@@ -30,3 +30,5 @@ C:\Users\tgilk\source\repos\bookK\bookK\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\App.baml
 C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\CreateBooking.g.cs
 C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\CreateBooking.baml
+C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\UserDetails.g.cs
+C:\Users\tgilk\source\repos\bookK\bookK\obj\Debug\UserDetails.baml

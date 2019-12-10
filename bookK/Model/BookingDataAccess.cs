@@ -47,6 +47,42 @@ namespace Model
             };
         }
 
+        public List<Booking> GetBookingsByUserID(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("Select * From [dbo].[Booking] as b, [dbo].[bookKUser] as bu, [dbo].[Book] as bo WHERE b.userId = bu.id AND b.bookId = bo.id AND b.userId = @id", connection);
+                connection.Open();
+
+                List<Booking> bookings = new List<Booking>();
+
+                cmd.Parameters.AddWithValue("id", id);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    bookings.Add(new Booking()
+                    {
+                        BookingID = reader.GetInt32(0),
+                        User = new User
+                        {
+                            UserID = reader.GetInt32(4),
+                            UserName = reader.GetString(5)
+                        },
+                        Book = new Book
+                        {
+                            BookID = reader.GetInt32(6),
+                            Title = reader.GetString(7),
+                            Author = reader.GetString(8),
+                            ISBN = reader.GetInt32(9),
+                            Available = reader.GetBoolean(10)
+                        },
+                        Returned = reader.GetBoolean(3)
+                    });
+                }
+                return bookings;
+            };
+        }
+
         public void CreateBooking(Booking booking)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

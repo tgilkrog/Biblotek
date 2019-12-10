@@ -22,5 +22,6 @@
         <Label Content="Navn" HorizontalAlignment="Left" Margin="535,81,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="535,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button Background="#39375b" BorderBrush="#39375b" Foreground="White" Content="Opret Bruger" HorizontalAlignment="Left" Margin="535,155,0,0" VerticalAlignment="Top" Width="139" Click="CreateUser"/>
+        <Button Background="#39375b" BorderBrush="#39375b" Foreground="White" Content="Bruger Detaljer" HorizontalAlignment="Left" Margin="240,44,0,0" VerticalAlignment="Top" Width="150" Click="UserDetails_Click"/>
     </Grid>
 </Page>

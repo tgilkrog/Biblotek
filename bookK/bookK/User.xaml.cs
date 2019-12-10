@@ -42,5 +42,13 @@ namespace bookK
             txtName.Clear();
             FillViewList();
         }
+
+        private void UserDetails_Click(object sender, RoutedEventArgs e)
+        {
+            
+            MainWindow mw = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mw != null)
+                mw.Main.Content = new UserDetails((Model.Classes.User)UserList.SelectedItem);
+        }
     }
 }

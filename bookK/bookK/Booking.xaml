@@ -29,7 +29,7 @@
             </ListView.View>
         </ListView>
 
-        <Button Background="#39375b" BorderBrush="#39375b" Foreground="White" Content="Returner Bog" HorizontalAlignment="Left" Margin="348,245,0,0" VerticalAlignment="Top" Width="128" Height="26" Click="UpdateBooking"/>
+        <Button Background="#39375b" BorderBrush="#39375b" Foreground="White" Content="Returner Bog" HorizontalAlignment="Left" Margin="348,245,0,0" VerticalAlignment="Top" Width="130" Height="35" Click="UpdateBooking"/>
         <Label Content="Udlejet Bøger" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" FontSize="14px" FontWeight="Bold"/>
         <Label Content="Returneret Bøger" HorizontalAlignment="Left" Margin="499,120,0,0" VerticalAlignment="Top" FontSize="14px" FontWeight="Bold"/>
 
