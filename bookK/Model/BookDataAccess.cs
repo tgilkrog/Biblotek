@@ -29,8 +29,8 @@ namespace Model
                         BookID = reader.GetInt32(0),
                         Title = reader.GetString(1),
                         Author = reader.GetString(2),
-                        ISBN = reader.GetInt32(3)
-
+                        ISBN = reader.GetInt32(3),
+                        Picture = reader.GetString(4)
                     });
                 }
                 return books;
@@ -54,8 +54,8 @@ namespace Model
                         BookID = reader.GetInt32(0),
                         Title = reader.GetString(1),
                         Author = reader.GetString(2),
-                        ISBN = reader.GetInt32(3)
-
+                        ISBN = reader.GetInt32(3),
+                        Picture = reader.GetString(4)
                     });
                 }
                 return books;
@@ -69,10 +69,11 @@ namespace Model
                 connection.Open();
                 using (SqlCommand cmd = connection.CreateCommand())
                 {
-                    cmd.CommandText = "Insert Into [dbo].[Book](title, author, isbn, available) values(@title, @author, @isbn, @available)";
+                    cmd.CommandText = "Insert Into [dbo].[Book](title, author, isbn, picture, available) values(@title, @author, @isbn, @picture, @available)";
                     cmd.Parameters.AddWithValue("title", book.Title);
                     cmd.Parameters.AddWithValue("author", book.Author);
                     cmd.Parameters.AddWithValue("isbn", book.ISBN);
+                    cmd.Parameters.AddWithValue("picture", book.Picture);
                     cmd.Parameters.AddWithValue("available", book.Available);
                     cmd.ExecuteNonQuery();
                 }

@@ -31,9 +31,6 @@
                 <RowDefinition Height="100" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
-            </Grid.Effect>
 
             <Grid Background="#4c4b6b">
                 <TextBlock Text="bookK" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="MV Boli" Foreground="White" FontSize="50"/>

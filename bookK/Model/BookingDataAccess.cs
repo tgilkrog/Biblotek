@@ -38,7 +38,7 @@ namespace Model
                             Title = reader.GetString(7),
                             Author = reader.GetString(8),
                             ISBN = reader.GetInt32(9),
-                            Available = reader.GetBoolean(10)
+                            Available = reader.GetBoolean(11)
                         },
                         Returned = reader.GetBoolean(3)
                     });
@@ -74,7 +74,7 @@ namespace Model
                             Title = reader.GetString(7),
                             Author = reader.GetString(8),
                             ISBN = reader.GetInt32(9),
-                            Available = reader.GetBoolean(10)
+                            Available = reader.GetBoolean(11)
                         },
                         Returned = reader.GetBoolean(3)
                     });

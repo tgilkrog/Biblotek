@@ -24,13 +24,14 @@ namespace Control
         }
 
         //Her oprettes en bog med tre parametre title, author og isbn nr.
-        public void CreateBook(string title, string author, string isbn)
+        public void CreateBook(string title, string author, string isbn, string picture)
         {
             Book book = new Book
             {
                 Title = title,
                 Author = author,
                 ISBN = Convert.ToInt32(isbn),
+                Picture = picture,
                 Available = true
             };
             Bda.CreateBook(book);

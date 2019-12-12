@@ -12,6 +12,7 @@ namespace Model.Classes
         public string Title { get; set; }
         public string Author { get; set; }
         public int ISBN { get; set; }
+        public string Picture { get; set; }
         public Boolean Available { get; set; }
     }
 }

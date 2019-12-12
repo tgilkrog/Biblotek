@@ -31,15 +31,17 @@ namespace bookK
 
         public void FillViewList()
         {
-            BookList.ItemsSource = Bctr.GetAllBooks();
+            //BookList.ItemsSource = Bctr.GetAllBooks();
+            TvBox.ItemsSource = Bctr.GetAllBooks();
         }
 
         private void CreateBook(object sender, RoutedEventArgs e)
         {
-            Bctr.CreateBook(txtTitle.Text, txtAuthor.Text, txtIsbn.Text);
+            Bctr.CreateBook(txtTitle.Text, txtAuthor.Text, txtIsbn.Text, txtPic.Text);
             txtTitle.Clear();
             txtAuthor.Clear();
             txtIsbn.Clear();
+            txtPic.Clear();
             FillViewList();
         }
     }

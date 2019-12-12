@@ -9,7 +9,7 @@
       Title="CreateBooking">
 
     <Grid Background="White">
-        <ListView Name="UserList" HorizontalAlignment="Left" Height="300" Margin="99,89,0,0" VerticalAlignment="Top" Width="200">
+        <ListView Name="UserList" HorizontalAlignment="Left" Height="300" Margin="579,10,0,0" VerticalAlignment="Top" Width="200">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Bib Nr." DisplayMemberBinding="{Binding UserID}"/>
@@ -17,15 +17,22 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView Name="BookList" HorizontalAlignment="Left" Height="300" Margin="540,89,0,0" VerticalAlignment="Top" Width="200">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
-                </GridView>
-            </ListView.View>
+
+        <ListView BorderThickness="1" BorderBrush="Black" Name="BookList" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="500" Height="500" Margin="10,10,314,0" Cursor="Hand">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="3" HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Image Source="{Binding Picture}" Height="200" Width="130" HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill" />
+                        <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
-        <Button Background="#39375b" BorderBrush="#39375b" Foreground="White" Content="Opret udlejning" HorizontalAlignment="Left" Margin="341,233,0,0" VerticalAlignment="Top" Width="165" Height="29" Click="NewBooking"/>
-        <Label Content="Bøger" HorizontalAlignment="Left" Margin="540,65,0,0" VerticalAlignment="Top"/>
-        <Label Content="Brugere" HorizontalAlignment="Left" Margin="99,60,0,0" VerticalAlignment="Top"/>
+        <Button Background="#39375b" BorderBrush="#39375b" Foreground="White" Content="Opret udlejning" HorizontalAlignment="Left" Margin="579,347,0,0" VerticalAlignment="Top" Width="185" Height="41" Click="NewBooking"/>
     </Grid>
 </Page>
